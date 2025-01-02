@@ -1,0 +1,53 @@
+<div class="login-container">
+  <form class="login-form">
+    <button class="login-close" data-menu-close>
+      <svg class="login-close-icon">
+        <use href="./images/icons.svg#close-icon"></use>
+      </svg>
+    </button>
+    <div class="input-container">
+      <!-- Input for name -->
+      <div class="input-wrapper" id="name-field-wrapper">
+        <input
+          type="text"
+          placeholder="NAME"
+          class="form-input"
+          id="name-field"
+        />
+      </div>
+
+      <!-- Input for email -->
+      <div class="input-wrapper">
+        <input
+          type="email"
+          required
+          placeholder="EMAIL"
+          class="form-input"
+          id="email-field"
+        />
+        <svg class="input-icon email-icon">
+          <use href="./images/icons.svg#email-icon"></use>
+        </svg>
+      </div>
+
+      <!-- Input for password -->
+      <div class="input-wrapper">
+        <input
+          type="password"
+          required
+          placeholder="PASSWORD"
+          class="form-input"
+          id="password-field"
+        />
+        <svg class="input-icon password-icon">
+          <use href="./images/icons.svg#password-icon"></use>
+        </svg>
+      </div>
+    </div>
+
+    <button class="sign-up-form" id="action-button">Sign Up</button>
+    <button id="toggle-auth" type="button" class="sign-up-form">
+      Switch to Log In
+    </button>
+  </form>
+</div>

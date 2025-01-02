@@ -1,0 +1,54 @@
+<header>
+  <div class="header-container">
+    <div class="logo-container">
+      <svg class="logo-icon">
+        <use href="./images/icons.svg#logo-icon"></use>
+      </svg>
+      <a href="index.html" id="logo-title" class="bookshelf-link">Bookshelf</a>
+    </div>
+    <div class="nav-button">
+      <a href="index.html" id="home-btn" class="header-btn">HOME</a>
+      <button id="shopping-btn" class="header-btn">
+        SHOPPING LIST
+        <svg class="bag-icon">
+          <use href="./images/icons.svg#bag-icon"></use>
+        </svg>
+      </button>
+    </div>
+
+    <div class="right-container">
+      <div class="theme-switcher">
+        <label class="theme-switcher__toggle">
+          <input
+            type="checkbox"
+            id="themeSwitcherCheckbox"
+            class="theme-switcher__checkbox"
+          />
+          <span class="theme-switcher__slider"></span>
+        </label>
+      </div>
+
+      <button class="menu-button-open" data-menu-open>
+        <svg class="menu-icon">
+          <use href="./images/icons.svg#menu-icon"></use>
+        </svg>
+      </button>
+      <button class="menu-button-close" data-menu-close>
+        <svg class="close-icon">
+          <use href="./images/icons.svg#menu-icon"></use>
+        </svg>
+      </button>
+      <div class="user-dropdown">
+        <button class="sign-up-button" id="auth-button" data-modal-open>
+          Sign up
+          <svg class="arrow-right">
+            <use href="./images/icons.svg#arrow-right"></use>
+          </svg>
+        </button>
+        <div class="dropdown-menu" id="dropdown-menu">
+          <button id="logout-button">Log Out</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

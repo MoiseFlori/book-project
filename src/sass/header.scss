@@ -1,0 +1,245 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 320px;
+  height: 64px;
+  padding: 18px 20px;
+  border-radius: 0px 0px 8px 8px;
+  border: 1.5px solid #111111;
+  background: #ffffff;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 109px;
+  height: 28px;
+}
+
+.logo-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.bookshelf-link {
+  width: 77px;
+  height: 13.27px;
+  color: #000000;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: -0.02em;
+}
+
+.header-btn {
+  display: none;
+}
+
+/* Theme Switcher */
+
+.theme-switcher {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  z-index: 1000;
+  display: inline-block;
+  // margin: 0;
+}
+
+.theme-switcher__slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, #4f2ee8 0%, #dcdcdc 100%);
+  border-radius: 34px;
+  transition: background-color 0.4s ease;
+}
+
+.theme-switcher__slider::before {
+  position: absolute;
+  content: '';
+  height: 18px;
+  width: 18px;
+  left: 1px;
+  bottom: 1px;
+  top: 1px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.4s ease;
+}
+
+.theme-switcher__checkbox:checked + .theme-switcher__slider {
+  background: linear-gradient(180deg, #4f2ee8 0%, #686868 100%);
+}
+
+.theme-switcher__checkbox:checked + .theme-switcher__slider::before {
+  transform: translateX(20px);
+}
+
+.theme-switcher__checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.right-container {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.menu-button-open {
+  width: 28px;
+  height: 28px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: black;
+}
+
+.menu-button-close {
+  display: none;
+}
+
+.menu-icon,
+.close-icon {
+  fill: black;
+  stroke: black;
+  width: 28px;
+  height: 28px;
+  margin: 0;
+}
+
+.menu-icon:hover,
+.menu-icon:focus,
+.close-icon:hover,
+.close-icon:focus {
+  fill: #4f2ee8;
+  stroke: #4f2ee8;
+}
+
+.sign-up-button {
+  display: none;
+}
+.user-dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: #4f2ee8;
+  border: 1px solid black;
+  border-radius: 32px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 6px;
+}
+
+.dropdown-menu button {
+  background-color: #4f2ee8;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+}
+
+
+.user-dropdown.active .dropdown-menu {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+// Tablet
+@media (min-width: 768px) {
+  .menu-button-open {
+    display: none;
+  }
+
+  .header-container {
+    min-width: 768px;
+    height: 72px;
+  }
+
+  .nav-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .header-btn {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: -0.04em;
+    padding: 7px 16px;
+    border-radius: 36px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .header-btn:hover,
+  #shopping-btn:hover {
+    background-color: #eac645;
+  }
+
+  #shopping-btn {
+    border: none;
+    background: none;
+    color: #111111;
+    width: 156px;
+    height: 34px;
+    gap: 4px;
+  }
+
+  .bag-icon {
+    fill: black;
+    stroke: black;
+    width: 20px;
+    height: 20px;
+  }
+
+  .sign-up-button {
+    display: flex;
+    align-items: center;
+    border: none;
+    background: none;
+    width: 184px;
+    height: 48px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: -0.04em;
+    gap: 90px;
+    border: 1.5px solid #111111;
+    border-radius: 18px;
+    background: #4f2ee8;
+    padding: 12px;
+  }
+
+  .arrow-right {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+// Desktop
+@media (min-width: 1440px) {
+  .header-container {
+    min-width: 1440x;
+  }
+}
